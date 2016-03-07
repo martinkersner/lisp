@@ -1,3 +1,8 @@
+; Learn to Program in Lisp, One Game at a Time! by Conrad Barski, M.D.
+
+; Martin Kersner, m.kersner@gmail.com
+; 2016/03/07 
+
 (defparameter *nodes* '((living-room (you are in the living-room. a wizard is snoring loudly on the couch.))
                         (garden (you are in a beautiful garden. there is a well in front of you.))
                         (attic (you are in the attic. there is a giant welding torch in the corner.))))
