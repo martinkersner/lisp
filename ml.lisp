@@ -24,3 +24,15 @@
         (one_minus_y (mapcar #'1- y))
         (one_div_len (/ 1 (length a))))
   (- (* one_div_len (apply '+ (mapcar #'+ (mapcar #'* y (log_list a)) (mapcar #'* one_minus_y (log_list one_minus_a))))))))
+
+;softmax function
+; e^(x_i)/sum(x_i)
+(defun softmax (x)
+  (let* ((x_to_exp (mapcar #'exp x))
+        (denominator (apply '+ x_to_exp)))
+    (my-div x_to_exp denominator)))
+
+(defun my-div (my-list denominator)
+  (if my-list (progn 
+                (cons (/ (car my-list) denominator)
+                      (my-div (cdr my-list) denominator)))))
