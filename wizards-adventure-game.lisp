@@ -32,3 +32,8 @@
   (labels ((at-loc-p (obj)
     (eq (cadr (assoc obj obj-locs)) loc)))
     (remove-if-not #'at-loc-p objs)))
+
+(defun describe-objects (loc objs obj-loc)
+ (labels ((describe-object (obj)
+             `(you see a ,obj at the floor.)))
+   (apply #'append (mapcar #'describe-object (objects-at loc objs obj-loc)))))
