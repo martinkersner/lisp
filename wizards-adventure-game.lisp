@@ -47,7 +47,7 @@
 
 (defun walk (direction)
   (let ((next (find direction
-              (cdr (assoc *object-locations* *edges*))
+              (cdr (assoc *location* *edges*))
               :key #'cadr)))
     (if next
       (progn (setf *location* (car next))
