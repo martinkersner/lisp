@@ -13,4 +13,4 @@
   (print "Input number:")
   (let ((number (read)))
     (print "Result is:")
-    (+ number 5)))
+    (prin1 (+ number 5))))
