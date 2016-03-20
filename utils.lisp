@@ -4,10 +4,10 @@
     0))
 
 (defun say-hello ()
-  (print "Please write your name:")
-  (let ((name (read)))
-       (print "Nice to meet you,")
-       (prin1 name)))
+  (princ "Please write your name: ")
+  (let ((name (read-line)))
+       (princ "Nice to meet you, ")
+       (princ name)))
 
 (defun add-five ()
   (print "Input number:")
