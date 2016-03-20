@@ -8,3 +8,9 @@
   (let ((name (read)))
        (print "Nice to meet you,")
        (prin1 name)))
+
+(defun add-five ()
+  (print "Input number:")
+  (let ((number (read)))
+    (print "Result is:")
+    (+ number 5)))
