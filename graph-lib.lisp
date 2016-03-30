@@ -14,3 +14,12 @@
     (if (> (length s) *max-label-length*)
       (concatenate 'string (subseq s 0 (- *max-label-length* 3)) "...")
       s))))
+
+(defun nodes->dot (nodes)
+  (mapc (lambda (node)
+          (fresh-line)
+          (princ (dot-name (car node)))
+          (princ "[label=\"")
+          (princ (dot-label node))
+          (princ "\"];"))
+         nodes))
